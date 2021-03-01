@@ -27,21 +27,27 @@ namespace BubbleSort
             }
             // Declare and initialize tempValue to be used for swap
             int temp = 0;
+            bool isArraySorted = false;
 
-            // Create a nested for loop to evaluate the array at two separate indices
-            for (var i = 0; i <= array.Length -1; i++)
-            {
-                for (var j = i +1 ; j <= array.Length -2 ; j++)
+            // Create a while loop to execute code block while isSorted is false
+           while (isArraySorted == false)
+           {
+               // Assume that Array is Sorted, Change value if code enters If Statement
+               isArraySorted = true;
+
+               for (var i = 0; i < array.Length -1; i++)
                 {
-                    if (array[i] > array[j])
+                    if (array[i] > array[i +1])
                     {
-                        // Conduct the swap
                         temp = array[i];
-                        array[i] = array[j];
-                        array[j] = temp;
+                        array[i] = array[i +1];
+                        array[i +1] = temp;
+
+                    // Since swapping occurred, isArraySorted = false
+                    isArraySorted = false;
                     }
                 }
-            }
+           } 
             Console.WriteLine("\nHere is your sorted array: ");
             foreach (var number in array)
             {

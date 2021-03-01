@@ -29,7 +29,7 @@ namespace BubbleSort
             int temp = 0;
 
             // Create a nested for loop to evaluate the array at two separate indices
-            for (var i = 0; i <= array.Length -2; i++)
+            for (var i = 0; i <= array.Length -1; i++)
             {
                 for (var j = i +1 ; j <= array.Length -2 ; j++)
                 {

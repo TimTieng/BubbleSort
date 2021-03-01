@@ -34,11 +34,12 @@ namespace BubbleSort
            {
                // Assume that Array is Sorted, Change value if code enters If Statement
                isArraySorted = true;
-
+                // Condition set to length -1 because we are evaluating at 2 sequential spots
                for (var i = 0; i < array.Length -1; i++)
                 {
                     if (array[i] > array[i +1])
                     {
+                        // Conduct the swap using temp variable technique
                         temp = array[i];
                         array[i] = array[i +1];
                         array[i +1] = temp;
